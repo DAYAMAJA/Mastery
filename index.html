@@ -1543,7 +1543,11 @@
         <a href="https://revistacps.github.io/Material1/" class="tag">
             <i class="fas fa-laptop"></i> E-Book
         </a>
-        <a href="https://revistacps.github.io/-Avisos-Importantes/" class="tag">
+        <a href="https://revistacps.github.io/-Avisos-Importantes/"
+           class="tag"
+           onclick="gtag('event','avisos_click',{
+              ubicacion:'superior'
+           });">
             <i class="fas fa-bell"></i> Avisos
         </a>
         <a href="https://revistacps.github.io/motordistribucionjuegos1/" class="tag">
@@ -1774,8 +1778,10 @@
                 <i class="fas fa-chevron-right" id="arrowIcon"></i>
             </div>
 
-            <a href="https://revistacps.github.io/MotorVideosPremium/" class="side-item">
-                <i class="fas fa-video"></i><span>Videos </span>
+            <a href="https://revistacps.github.io/MotorVideosPremium/"
+               class="side-item"
+               onclick="gtag('event','videos_click');">
+                <i class="fas fa-video"></i><span>Videos</span>
             </a>
 
             <a href="https://revistacps.github.io/MotordetemasA1/" class="side-item">
@@ -1790,9 +1796,13 @@
                 <i class="fas fa-book"></i><span>Revista</span>
             </a>
 
-            <a href="https://revistacps.github.io/-Avisos-Importantes/" class="side-item">
-                <i class="fas fa-bell"></i><span>Avisos</span>
-            </a>
+            <a href="https://revistacps.github.io/-Avisos-Importantes/"
+                   class="side-item"
+                   onclick="gtag('event','avisos_click',{
+                      ubicacion:'sidebar'
+                   });">
+                    <i class="fas fa-bell"></i><span>Avisos</span>
+                </a>
 
             <a href="javascript:void(0)" class="side-item" onclick="activarPremium()">
                 <i class="fas fa-crown"></i><span>Ingresar al Portal</span> </a>
