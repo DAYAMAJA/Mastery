@@ -17,13 +17,16 @@ gtag('config', 'G-7X2KN6HX03');
 
 function registrarEvento(nombre, datos = {}) {
 
+    console.log("Enviando evento:", nombre, datos);
+
     if (typeof gtag === "function") {
         gtag('event', nombre, datos);
-        console.log("Analytics:", nombre, datos);
+        console.log("Evento enviado correctamente.");
+    } else {
+        console.error("gtag no está disponible.");
     }
 
 }
-
 </script>
 
     <!-- Facebook -->
