@@ -1948,13 +1948,18 @@ function cerrarPremium() {
       }
   }
 
-  // Al cargar la página, leer la preferencia
-  window.addEventListener('DOMContentLoaded', () => {
-      const darkMode = localStorage.getItem('darkMode');
-      if (darkMode === 'true') {
-          document.body.classList.add('dark');
-      }
-  });
+          // Al cargar la página, leer la preferencia
+        window.addEventListener('DOMContentLoaded', () => {
+
+        gtag('event', 'home_open');
+
+        const darkMode = localStorage.getItem('darkMode');
+
+        if (darkMode === 'true') {
+        document.body.classList.add('dark');
+        }
+        });
+            
         </script>
 
         </script>
