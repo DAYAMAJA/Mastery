@@ -16,17 +16,22 @@ gtag('js', new Date());
 gtag('config', 'G-7X2KN6HX03');
 
 function registrarEvento(nombre, datos = {}) {
-
-    console.log("Enviando evento:", nombre, datos);
-
+    const evento = {
+        pagina: location.pathname,
+        url: location.href,
+        titulo: document.title,
+        fecha: new Date().toISOString(),
+        ...datos
+    };
+    console.log("Enviando evento:", nombre, evento);
     if (typeof gtag === "function") {
-        gtag('event', nombre, datos);
+        gtag("event", nombre, evento);
         console.log("Evento enviado correctamente.");
     } else {
         console.error("gtag no está disponible.");
     }
-
 }
+    
 </script>
 
     <!-- Facebook -->
