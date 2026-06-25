@@ -1807,10 +1807,10 @@ function registrarEvento(nombre, datos = {}) {
             </a>
 
             <a href="https://revistacps.github.io/-Avisos-Importantes/"
-                   class="side-item"
-                   onclick="gtag('event','avisos_click',{
-                      ubicacion:'sidebar'
-                   });">
+               class="side-item"
+               onclick="registrarEvento('avisos_click',{
+                  ubicacion:'sidebar'
+               });">
                     <i class="fas fa-bell"></i><span>Avisos</span>
                 </a>
 
