@@ -204,6 +204,179 @@ function registrarEvento(nombre, datos = {}) {
         }
 
 
+                            /* ===================================== */
+                            /* MODAL INSTALAR APP */
+                            /* ===================================== */
+
+                    .modal-instalar{
+
+                        display:none;
+
+                        position:fixed;
+
+                        top:0;
+
+                        left:0;
+
+                        width:100%;
+
+                        height:100%;
+
+                        background:rgba(0,0,0,.75);
+
+                        justify-content:center;
+
+                        align-items:center;
+
+                        z-index:9999;
+
+                        animation:fadeIn .3s;
+
+                    }
+
+                    /* Caja */
+
+                    .modal-contenido{
+
+                        width:90%;
+
+                        max-width:420px;
+
+                        background:linear-gradient(180deg,#23234d,#111126);
+
+                        border:2px solid #9f5cff;
+
+                        border-radius:22px;
+
+                        padding:30px;
+
+                        text-align:center;
+
+                        color:white;
+
+                        box-shadow:0 0 35px rgba(162,84,255,.7);
+
+                        position:relative;
+
+                    }
+
+                    /* Título */
+
+                    .modal-contenido h2{
+
+                        margin-top:0;
+
+                        color:#ffd95e;
+
+                        font-size:28px;
+
+                    }
+
+                    /* Texto */
+
+                    .modal-contenido p{
+
+                        color:#dddddd;
+
+                        line-height:1.6;
+
+                    }
+
+                    /* Lista */
+
+                    .modal-contenido ul{
+
+                        list-style:none;
+
+                        padding:0;
+
+                        margin:25px 0;
+
+                    }
+
+                    .modal-contenido li{
+
+                        margin:12px 0;
+
+                        font-size:17px;
+
+                    }
+
+                    /* Botón */
+
+                    .btn-instalar{
+
+                        background:linear-gradient(90deg,#7b2cff,#b85cff);
+
+                        color:white;
+
+                        border:none;
+
+                        padding:15px 28px;
+
+                        border-radius:40px;
+
+                        cursor:pointer;
+
+                        font-size:18px;
+
+                        font-weight:bold;
+
+                        transition:.3s;
+
+                    }
+
+                    .btn-instalar:hover{
+
+                        transform:scale(1.05);
+
+                        box-shadow:0 0 20px #b85cff;
+
+                    }
+
+                    /* X */
+
+                    .cerrar-modal{
+
+                        position:absolute;
+
+                        right:18px;
+
+                        top:10px;
+
+                        font-size:32px;
+
+                        cursor:pointer;
+
+                        color:white;
+
+                    }
+
+                    .cerrar-modal:hover{
+
+                        color:#ffd95e;
+
+                    }
+
+                    /* Animación */
+
+                    @keyframes fadeIn{
+
+                        from{
+
+                            opacity:0;
+
+                        }
+
+                        to{
+
+                            opacity:1;
+
+                        }
+
+                    }
+
+
         /* ================== ETIQUETAS LINEALES EN CELULAR ================== */
 
         @media (max-width: 480px) {
@@ -1581,7 +1754,45 @@ function registrarEvento(nombre, datos = {}) {
                onclick="Analytics.evento('juego_abierto');">
                 <i class="fas fa-gamepad"></i> Juegos
             </a>
+            <!-- NUEVO BOTÓN -->
+    <a href="#"
+   class="tag"
+   onclick="Analytics.evento('boton_app_click'); abrirModal(); return false;">
+        <i class="fas fa-mobile-alt"></i> Instalar
+    </a>
+
     </div>
+
+             <!-- ========================= -->
+            <!-- MODAL INSTALAR APP -->
+            <!-- ========================= -->
+
+            <div id="modalInstalar" class="modal-instalar">
+
+                <div class="modal-contenido">
+
+                    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+
+                    <h2>📱 Instala Mastery English</h2>
+
+                    <p>
+                        Agrega Mastery English a la pantalla principal de tu celular
+                        para acceder con un solo toque.
+                    </p>
+
+                    <ul>
+                        <li>⚡ Acceso más rápido.</li>
+                        <li>📚 Continúa aprendiendo donde quieras.</li>
+                        <li>🎮 Experiencia similar a una aplicación.</li>
+                    </ul>
+
+                    <button class="btn-instalar" onclick="cerrarModal()">
+                        🚀 Próximamente.
+                    </button>
+
+                </div>
+
+            </div>
 
     <!-- MAIN CONTENT -->
     <div class="main-content">
@@ -2028,6 +2239,43 @@ function cerrarPremium() {
         document.body.classList.add('dark');
     }
 });
+
+
+function abrirModal() {
+
+    const modal = document.getElementById("modalInstalar");
+
+    if (modal) {
+        modal.style.display = "flex";
+    }
+
+}
+
+function cerrarModal() {
+
+    const modal = document.getElementById("modalInstalar");
+
+    if (modal) {
+        modal.style.display = "none";
+    }
+
+}
+
+// Cerrar al hacer clic fuera de la ventana
+
+window.onclick = function(event) {
+
+    const modal = document.getElementById("modalInstalar");
+
+    if (event.target === modal) {
+
+        cerrarModal();
+
+    }
+
+};
+
+</script>
             
         </script>
 
