@@ -32,7 +32,10 @@ function registrarEvento(nombre, datos = {}) {
     }
 }
 
-    const Analytics = {
+   const Analytics = {
+    evento(nombre, datos = {}) {
+        registrarEvento(nombre, datos);
+    }
 };
     
 </script>
