@@ -1612,7 +1612,11 @@ function registrarEvento(nombre, datos = {}) {
                 </iframe>
             </div>
             <h3 style="text-align:center; margin-top:10px;">Clase 1</h3>
-            <a href="https://revistacps.github.io/Video-megan-1/" class="lesson-button">
+            <a href="https://revistacps.github.io/Video-megan-1/"
+               class="lesson-button"
+               onclick="Analytics.evento('clase_abierta',{
+                  clase:'Clase 1'
+               });">
                 Aprende una frase diaria con Megan
             </a>
         </div>
