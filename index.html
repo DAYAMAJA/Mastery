@@ -2234,35 +2234,62 @@ function cerrarPremium() {
           // Al cargar la página, leer la preferencia
         window.addEventListener('DOMContentLoaded', () => {
 
-    Analytics.evento('home_open');
-
-    const darkMode = localStorage.getItem('darkMode');
-
-    if (darkMode === 'true') {
-        document.body.classList.add('dark');
-    }
-});
-
-
-function abrirModal() {
-
-    const modal = document.getElementById("modalInstalar");
-
-    if (modal) {
-        modal.style.display = "flex";
-    }
-
-}
-
-function cerrarModal() {
-
-    const modal = document.getElementById("modalInstalar");
-
-    if (modal) {
-        modal.style.display = "none";
-    }
-
-}
+                Analytics.evento('home_open');
+            
+                const darkMode = localStorage.getItem('darkMode');
+            
+                if (darkMode === 'true') {
+                    document.body.classList.add('dark');
+                }
+            });
+            
+                        // ==============================
+            // REGISTRAR SERVICE WORKER
+            // ==============================
+            
+            if ('serviceWorker' in navigator) {
+            
+                window.addEventListener('load', () => {
+            
+                    navigator.serviceWorker
+                        .register('./service-worker.js')
+            
+                        .then((registro) => {
+            
+                            console.log("✅ Service Worker registrado.");
+            
+                        })
+            
+                        .catch((error) => {
+            
+                            console.error("❌ Error al registrar Service Worker:", error);
+            
+                        });
+            
+                });
+            
+            }
+            
+            
+            function abrirModal() {
+            
+                const modal = document.getElementById("modalInstalar");
+            
+                if (modal) {
+                    modal.style.display = "flex";
+                }
+            
+            }
+            
+            function cerrarModal() {
+            
+                const modal = document.getElementById("modalInstalar");
+            
+                if (modal) {
+                    modal.style.display = "none";
+                }
+            
+            }
 
 // Cerrar al hacer clic fuera de la ventana
 
