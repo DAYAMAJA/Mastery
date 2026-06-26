@@ -1564,9 +1564,11 @@ function registrarEvento(nombre, datos = {}) {
 
     <!-- TAGS -->
     <div class="tags-container">
-        <a href="https://revistacps.github.io/Material1/" class="tag">
-            <i class="fas fa-laptop"></i> E-Book
-        </a>
+        <a href="https://revistacps.github.io/Material1/"
+               class="tag"
+               onclick="Analytics.evento('ebook_abierto');">
+                <i class="fas fa-laptop"></i> E-Book
+            </a>
         <a href="https://revistacps.github.io/-Avisos-Importantes/"
            class="tag"
            onclick="Analytics.evento('avisos_click',{
