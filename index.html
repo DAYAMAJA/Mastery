@@ -1978,7 +1978,7 @@ function cerrarPremium() {
           // Al cargar la página, leer la preferencia
         window.addEventListener('DOMContentLoaded', () => {
 
-    registrarEvento('home_open');
+    Analytics.evento('home_open');
 
     const darkMode = localStorage.getItem('darkMode');
 
