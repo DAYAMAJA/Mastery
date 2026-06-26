@@ -1804,7 +1804,7 @@ function registrarEvento(nombre, datos = {}) {
 
             <a href="https://revistacps.github.io/MotorVideosPremium/"
                class="side-item"
-               onclick="registrarEvento('videos_click');">
+               onclick="Analytics.evento('videos_click');">
                 <i class="fas fa-video"></i><span>Videos</span>
             </a>
 
@@ -1822,7 +1822,7 @@ function registrarEvento(nombre, datos = {}) {
 
             <a href="https://revistacps.github.io/-Avisos-Importantes/"
                class="side-item"
-               onclick="registrarEvento('avisos_click',{
+               onclick="Analytics.evento('avisos_click',{
                   ubicacion:'sidebar'
                });">
                     <i class="fas fa-bell"></i><span>Avisos</span>
