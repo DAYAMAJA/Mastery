@@ -1933,7 +1933,7 @@ function toggleSidebar() {
     } else {
         arrow.classList.remove("fa-chevron-left");
         arrow.classList.add("fa-chevron-right");
-        registrarEvento("sidebar_close", {
+        Analytics.evento("sidebar_close", {
             estado: "cerrado"
         });
     }
