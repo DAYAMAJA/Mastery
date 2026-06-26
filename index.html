@@ -1918,15 +1918,19 @@ document.addEventListener('DOMContentLoaded', () => {
 function toggleSidebar() {
     const sidebar = document.getElementById("sidebar");
     const arrow = document.getElementById("arrowIcon");
-
     sidebar.classList.toggle("active");
-
     if (sidebar.classList.contains("active")) {
         arrow.classList.remove("fa-chevron-right");
         arrow.classList.add("fa-chevron-left");
+        registrarEvento("sidebar_open", {
+            estado: "abierto"
+        });
     } else {
         arrow.classList.remove("fa-chevron-left");
         arrow.classList.add("fa-chevron-right");
+        registrarEvento("sidebar_close", {
+            estado: "cerrado"
+        });
     }
 }
 
