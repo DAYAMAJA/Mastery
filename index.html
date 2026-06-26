@@ -2319,11 +2319,15 @@ function abrirModal() {
 
         deferredPrompt.prompt();
 
-    } else {
+        return;
 
-        alert(
-"📱 Para instalar Mastery English, abre esta página en Google Chrome y luego pulsa el botón 'Instalar'."
-);
+    }
+
+    const modal = document.getElementById("modalInstalar");
+
+    if (modal) {
+
+        modal.style.display = "flex";
 
     }
 
