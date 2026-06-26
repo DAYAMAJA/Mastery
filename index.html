@@ -2287,10 +2287,14 @@ window.addEventListener("beforeinstallprompt", (e) => {
 
 function abrirModal() {
 
-    const modal = document.getElementById("modalInstalar");
+    if (deferredPrompt) {
 
-    if (modal) {
-        modal.style.display = "flex";
+        deferredPrompt.prompt();
+
+    } else {
+
+        alert("La aplicación aún no está lista para instalarse.");
+
     }
 
 }
