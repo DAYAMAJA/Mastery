@@ -1980,7 +1980,12 @@ function toggleSidebar() {
 }
 
 /* --- PREMIUM OVERLAY --- */
+
+
 function activarPremium() {
+
+    Analytics.evento('portal_premium');
+
     const overlay = document.getElementById('premiumOverlay');
     const container = document.getElementById('premiumContainer');
 
