@@ -2053,14 +2053,14 @@ function registrarEvento(nombre, datos = {}) {
 
             <a href="https://revistacps.github.io/MotorVideosPremium/"
                class="side-item"
-               onclick="Analytics.evento('videos_click');">
+               onclick="Analytics.evento('motor_videos_premium_click');">
                 <i class="fas fa-video"></i><span>Videos</span>
             </a>
 
             <a href="https://revistacps.github.io/motordistribucionvideos1/"
                class="side-item"
-               onclick="Analytics.evento('ebook_abierto');">
-                <i class="fas fa-book-open"></i><span>Clases "Ingles Básico"</span>
+               onclick="Analytics.evento('clases_ingles_click');">
+                <i class="fas fa-book-open"></i><span>Clases "Inglés Básico"</span>
             </a>
 
             <a href="https://revistacps.github.io/MotordetemasA1/"
@@ -2069,9 +2069,9 @@ function registrarEvento(nombre, datos = {}) {
                 <i class="fas fa-chalkboard-teacher"></i><span>Temas</span>
             </a>
 
-           <a href="https://revistacps.github.io/MOTORDETRADUCCIONESESPACIALES/"
+            <a href="https://revistacps.github.io/MOTORDETRADUCCIONESESPACIALES/"
                class="side-item"
-               onclick="Analytics.evento('traduccion_abierta');">
+               onclick="Analytics.evento('motor_traducciones_click');">
                 <i class="fas fa-book"></i><span>Traducciones</span>
             </a>
 
@@ -2083,14 +2083,15 @@ function registrarEvento(nombre, datos = {}) {
 
             <a href="https://revistacps.github.io/-Avisos-Importantes/"
                class="side-item"
-               onclick="Analytics.evento('avisos_click',{
-                  ubicacion:'sidebar'
-               });">
-                    <i class="fas fa-bell"></i><span>Avisos</span>
-                </a>
+               onclick="Analytics.evento('avisos_oportunos_click');">
+                <i class="fas fa-bell"></i><span>Avisos</span>
+            </a>
 
-            <a href="javascript:void(0)" class="side-item" onclick="activarPremium()">
-                <i class="fas fa-crown"></i><span>Ingresar al Portal</span> </a>
+            <a href="javascript:void(0)"
+               class="side-item"
+               onclick="Analytics.evento('portal_magico_click'); activarPremium();">
+                <i class="fas fa-crown"></i><span>Ingresar al Portal</span>
+            </a>
 
         </div>
 
