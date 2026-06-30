@@ -1740,24 +1740,21 @@ function registrarEvento(nombre, datos = {}) {
 
     <!-- TAGS -->
     <div class="tags-container">
-        <a href="https://dayamaja.github.io/Stripe-Lab/"
-           class="tag"
-           onclick="Analytics.evento('avisos_click',{
-              ubicacion:'superior'
-           });">
-            <i class="fas fa-bell"></i> Llave cosmica
-        </a>
-        <a href="https://revistacps.github.io/motordistribucionjuegos1/"
-               class="tag"
-               onclick="Analytics.evento('juego_abierto');">
-                <i class="fas fa-gamepad"></i> Juegos
-            </a>
-            <!-- NUEVO BOTÓN -->
-    <a href="#"
-   class="tag"
-   onclick="Analytics.evento('boton_app_click'); abrirModal(); return false;">
-        <i class="fas fa-mobile-alt"></i> Instalar
-    </a>
+                <a href="https://dayamaja.github.io/Stripe-Lab/"
+                   class="tag"
+                   onclick="Analytics.evento('suscripcion_paga_click');">
+                    <i class="fas fa-bell"></i> Llave Cósmica
+                </a>
+                <a href="https://revistacps.github.io/motordistribucionjuegos1/"
+                   class="tag"
+                   onclick="Analytics.evento('motor_juegos_click');">
+                    <i class="fas fa-gamepad"></i> Juegos
+                </a>
+                <a href="#"
+                   class="tag"
+                   onclick="Analytics.evento('descarga_app_click'); abrirModal(); return false;">
+                    <i class="fas fa-mobile-alt"></i> Instalar
+                </a>
 
     </div>
 
